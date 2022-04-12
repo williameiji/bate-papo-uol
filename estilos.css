@@ -1,0 +1,38 @@
+
+
+body {
+	background-color: white;
+	box-sizing: border-box;
+}
+
+.telaInicial {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 270px;
+	height: 400px;
+	margin: 50px auto;
+	
+}
+
+.telaInicial input {
+	width: 261px;
+	height: 54px;
+	border: 1px solid #D7D7D7;
+	border-radius: 4px;
+	margin-top: 94px;
+	text-align: center;
+	color: #AEAEAE;
+	font-size: 18px;
+}
+
+.telaInicial button{
+	width: 109px;
+	height: 45px;
+	background: #E7E7E7;
+	border-radius: 9px;
+	border: 0;
+	margin-top: 15px;
+}
+
