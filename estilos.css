@@ -14,7 +14,7 @@ body {
 	position: fixed;
 	top: 0;
 	left: 0;
-	display: none;
+	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -22,7 +22,6 @@ body {
 	height: 100%;
 	margin: 0 auto;
 	z-index: 2;
-	/* Tirar display none e talvez add z-index */
 }
 
 .telaInicial input {
@@ -102,8 +101,8 @@ body {
 	margin-left: 10px;
 }
 
-.enviandoPara p {
-	display: none;
+.enviandoPara {
+	display: flex;
 	margin-left: 20px;
 	font-size: 14px;
 	color: #AEAEAE;
@@ -127,4 +126,70 @@ ul li {
 
 .privado {
 	background-color: #FFDEDE;
+}
+
+.participantesAtivos {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	z-index: 3;
+	width: 100%;
+	height: 100%;
+}
+
+.transparente {
+	width: 150px;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.participantes {
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.participantes > p {
+	font-size: 16px;
+	font-weight: bold;
+	padding: 30px 40px;
+	text-align: center;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.contato, .contato > div, .fixo, .fixo > div{
+	width: 100%;
+	height: 36px;
+	display: flex;
+	align-items: center;
+	padding: 0 13px 0 10px;
+}
+
+.fixoIon p, .contatoIon p{
+	font-size: 16px;
+	margin-left: 10px;
+}
+
+.fixoIon ion-icon, .contatoIon ion-icon  {
+	width: 35px;
+	height: 30px;
+}
+
+/* arrumar no onclick */
+.fixo:active .check, .contato:active .check {
+	opacity: 1;
+}
+
+.check {
+	color: #28BB25;
+	opacity: 0;
+}
+
+.escondido{
+	display: none;
 }

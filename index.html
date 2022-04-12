@@ -11,8 +11,8 @@
 <body>
 
     <!-- Tela inicial Bonus -->
-    <div class="telaInicial">
-        <img src="/Projeto_05_batePapoUOL/imagens/logo 2.png">
+    <div class="telaInicial escondido">
+        <img src="./imagens/logo 2.png">
         <input type="text" placeholder="Digite seu nome">
         <button>Entrar</button>
     </div>    
@@ -23,7 +23,7 @@
     <div class="container">
 
         <div class="barraTop">
-            <img src="/Projeto_05_batePapoUOL/imagens/logo 2.png">
+            <img src="./imagens/logo 2.png">
             <ion-icon name="people"></ion-icon>
         </div>
 
@@ -38,13 +38,59 @@
         </ul>
 
         <div class="participantesAtivos">
+            <div class="transparente"></div>
+            <div class="participantes">
 
+                <p>Escolha um contato para enviar mensagem:</p>
+
+                <div class="fixo">
+                    <div class="fixoIon">
+                        <ion-icon name="people"></ion-icon>
+                        <p>Todos</p>
+                    </div>
+                    <ion-icon class="check" name="checkmark-sharp"></ion-icon>
+                </div>
+
+                <div class="listaContatos">
+
+                    <div class="contato">
+                        <div class="contatoIon">
+                            <ion-icon name="person-circle-sharp"></ion-icon>
+                            <p>Maria</p>
+                        </div>
+                    <ion-icon class="check" name="checkmark-sharp"></ion-icon>
+                    </div>
+
+                </div>
+
+                <p>Escolha a visibilidade</p>
+
+                <div class="visibilidade">
+
+                    <div class="fixo">
+                        <div class="fixoIon">
+                            <ion-icon name="lock-open"></ion-icon>
+                            <p>Público</p>
+                        </div>
+                        <ion-icon class="check" name="checkmark-sharp"></ion-icon>
+                    </div>
+
+                    <div class="fixo">
+                        <div class="fixoIon">
+                            <ion-icon name="lock-open"></ion-icon>
+                            <p>Reservadamente</p>
+                        </div>
+                        <ion-icon class="check" name="checkmark-sharp"></ion-icon>
+                    </div>
+
+                </div>
+            </div>
         </div>
 
         <div class="barraBot">
-            <div class="enviandoPara">
+            <div class="">
             <input type="text" placeholder="Escreva aqui...">
-            <p>enviando para</p>
+            <p class="enviandoPara escondido">enviando para</p>
             </div>
             <ion-icon name="paper-plane-outline"></ion-icon>
         </div>
