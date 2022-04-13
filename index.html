@@ -11,10 +11,10 @@
 <body>
 
     <!-- Tela inicial Bonus -->
-    <div class="telaInicial escondido">
+    <div class="telaInicial">
         <img src="./imagens/logo 2.png">
         <input type="text" placeholder="Digite seu nome">
-        <button>Entrar</button>
+        <button onclick="logIn(this)">Entrar</button>
     </div>    
     <!-- Tela inicial Bonus -->
 
@@ -24,10 +24,11 @@
 
         <div class="barraTop">
             <img src="./imagens/logo 2.png">
-            <ion-icon name="people"></ion-icon>
+            <ion-icon name="people" onclick="teste()"></ion-icon>
         </div>
 
         <ul class="chatPrincipal">
+            <!-- CODIGO POR JS -->
             <li>teste // teste // teste // teste // teste // teste // teste // teste // teste</li>
             <li class="privado">teste // teste // teste</li>
             <li>teste // teste // teste</li>
@@ -35,9 +36,10 @@
             <li>teste // teste // teste</li>
             <li>teste // teste // teste</li>
             <li>teste // teste // teste</li>
+            <!-- CODIGO POR JS -->
         </ul>
 
-        <div class="participantesAtivos">
+        <div class="participantesAtivos escondido">
             <div class="transparente"></div>
             <div class="participantes">
 
@@ -52,15 +54,7 @@
                 </div>
 
                 <div class="listaContatos">
-
-                    <div class="contato">
-                        <div class="contatoIon">
-                            <ion-icon name="person-circle-sharp"></ion-icon>
-                            <p>Maria</p>
-                        </div>
-                    <ion-icon class="check" name="checkmark-sharp"></ion-icon>
-                    </div>
-
+                    
                 </div>
 
                 <p>Escolha a visibilidade</p>
@@ -100,7 +94,9 @@
     <!-- Tela principal -->
     
 
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>

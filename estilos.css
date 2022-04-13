@@ -178,7 +178,7 @@ ul li {
 .fixoIon ion-icon, .contatoIon ion-icon  {
 	width: 35px;
 	height: 30px;
-}
+}	
 
 /* arrumar no onclick */
 .fixo:active .check, .contato:active .check {
