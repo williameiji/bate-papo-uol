@@ -6,41 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="estilos.css">
-    <title>Batepapo UOL</title>
+    <link rel="shortcut icon" href="./imagens/logo1.jpg" />
+    <title>Bate-papo UOL</title>
 </head>
 <body>
-
-    <!-- Tela inicial Bonus -->
     <div class="telaInicial">
-        <img src="./imagens/logo 2.png">
+        <img src="./imagens/logo 2.png" alt="" width="130px" height="92px">
         <input type="text" placeholder="Digite seu nome">
         <button onclick="logIn(this)">Entrar</button>
-    </div>    
-    <!-- Tela inicial Bonus -->
-
-    <!-- Tela principal -->
+    </div>
 
     <div class="container">
-
         <div class="barraTop">
-            <img src="./imagens/logo 2.png">
+            <img src="./imagens/logo 2.png" alt="" width="75px" height="53px">
             <ion-icon name="people" onclick="abaParticipantes()"></ion-icon>
         </div>
 
         <ul class="chatPrincipal scroll">
-            
         </ul>
 
         <div class="participantesAtivos escondido">
             <div class="transparente" onclick="sumirAbaParticipantes()"></div>
             <div class="participantes">
-
                 <p>Escolha um contato para enviar mensagem:</p>
-
-               
-
                 <div class="listaContatos">
-
                     <div class="contato checkContato" onclick="todosParticular(this)">
                         <div class="contatoIon">
                             <ion-icon name="people"></ion-icon>
@@ -48,15 +37,11 @@
                         </div>
                         <ion-icon name="checkmark-sharp"></ion-icon>
                     </div>
-
-                    
-                    
                 </div>
 
                 <p>Escolha a visibilidade</p>
 
                 <div class="visibilidade">
-
                     <div class="fixo check" onclick="todosPrivado(this)">
                         <div class="fixoIon">
                             <ion-icon name="lock-open"></ion-icon>
@@ -64,7 +49,6 @@
                         </div>
                         <ion-icon name="checkmark-sharp"></ion-icon>
                     </div>
-
                     <div class="fixo"  onclick="todosPrivado(this)">
                         <div class="fixoIon">
                             <ion-icon name="lock-closed"></ion-icon>
@@ -72,7 +56,6 @@
                         </div>
                         <ion-icon name="checkmark-sharp"></ion-icon>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -84,11 +67,7 @@
             </div>
             <ion-icon name="paper-plane-outline" onclick="botaoEnviar()"></ion-icon>
         </div>
-
     </div>
-
-    <!-- Tela principal -->
-    
 
     <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
