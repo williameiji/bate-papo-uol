@@ -24,36 +24,32 @@
 
         <div class="barraTop">
             <img src="./imagens/logo 2.png">
-            <ion-icon name="people" onclick="teste()"></ion-icon>
+            <ion-icon name="people" onclick="abaParticipantes()"></ion-icon>
         </div>
 
-        <ul class="chatPrincipal">
-            <!-- CODIGO POR JS -->
-            <li>teste // teste // teste // teste // teste // teste // teste // teste // teste</li>
-            <li class="privado">teste // teste // teste</li>
-            <li>teste // teste // teste</li>
-            <li>teste // teste // teste</li>
-            <li>teste // teste // teste</li>
-            <li>teste // teste // teste</li>
-            <li>teste // teste // teste</li>
-            <!-- CODIGO POR JS -->
+        <ul class="chatPrincipal scroll">
+            
         </ul>
 
         <div class="participantesAtivos escondido">
-            <div class="transparente"></div>
+            <div class="transparente" onclick="sumirAbaParticipantes()"></div>
             <div class="participantes">
 
                 <p>Escolha um contato para enviar mensagem:</p>
 
-                <div class="fixo">
-                    <div class="fixoIon">
-                        <ion-icon name="people"></ion-icon>
-                        <p>Todos</p>
-                    </div>
-                    <ion-icon class="check" name="checkmark-sharp"></ion-icon>
-                </div>
+               
 
                 <div class="listaContatos">
+
+                    <div class="contato checkContato" onclick="todosParticular(this)">
+                        <div class="contatoIon">
+                            <ion-icon name="people"></ion-icon>
+                            <p>Todos</p>
+                        </div>
+                        <ion-icon name="checkmark-sharp"></ion-icon>
+                    </div>
+
+                    
                     
                 </div>
 
@@ -61,20 +57,20 @@
 
                 <div class="visibilidade">
 
-                    <div class="fixo">
+                    <div class="fixo check" onclick="todosPrivado(this)">
                         <div class="fixoIon">
                             <ion-icon name="lock-open"></ion-icon>
-                            <p>Público</p>
+                            <p class="tipoChat">Público</p>
                         </div>
-                        <ion-icon class="check" name="checkmark-sharp"></ion-icon>
+                        <ion-icon name="checkmark-sharp"></ion-icon>
                     </div>
 
-                    <div class="fixo">
+                    <div class="fixo"  onclick="todosPrivado(this)">
                         <div class="fixoIon">
-                            <ion-icon name="lock-open"></ion-icon>
-                            <p>Reservadamente</p>
+                            <ion-icon name="lock-closed"></ion-icon>
+                            <p class="tipoChat">Reservadamente</p>
                         </div>
-                        <ion-icon class="check" name="checkmark-sharp"></ion-icon>
+                        <ion-icon name="checkmark-sharp"></ion-icon>
                     </div>
 
                 </div>
@@ -82,11 +78,11 @@
         </div>
 
         <div class="barraBot">
-            <div class="">
-            <input type="text" placeholder="Escreva aqui...">
-            <p class="enviandoPara escondido">enviando para</p>
+            <div class="inputMensagem">
+                <input type="text" placeholder="Escreva aqui...">
+                <p class="enviandoPara escondido">enviando para</p>
             </div>
-            <ion-icon name="paper-plane-outline"></ion-icon>
+            <ion-icon name="paper-plane-outline" onclick="botaoEnviar()"></ion-icon>
         </div>
 
     </div>
