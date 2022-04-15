@@ -115,21 +115,22 @@ function tratarMensagens(mensagens){
     window.scrollTo(0, 4000);
 }
 
-function buscarParticipantes () {
-    const promise = axios.get("https://mock-api.driven.com.br/api/v6/uol/participants");
-    promise.then(addParticipantes);
-}
-
 function abaParticipantes (){
     const popUp = document.querySelector(".participantesAtivos");
     popUp.classList.remove("escondido");
     const alteraP = document.querySelector(".enviandoPara");
     alteraP.classList.add("escondido");
+    paraQuemChat = "Todos";
 }
 
 function sumirAbaParticipantes(){
     const popUp = document.querySelector(".participantesAtivos");
     popUp.classList.add("escondido");
+}
+
+function buscarParticipantes () {
+    const promise = axios.get("https://mock-api.driven.com.br/api/v6/uol/participants");
+    promise.then(addParticipantes);
 }
 
 function addParticipantes (participantes) {
@@ -170,6 +171,7 @@ function todosParticular (clicado) {
         alterarInput();
     }else {
         alteraP.classList.add("escondido");
+        alterarInput();
     }
 }
 
