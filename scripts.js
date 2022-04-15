@@ -63,12 +63,6 @@ function nomeErro (nome) {
 function buscarMensagens (){
     const promise = axios.get("https://mock-api.driven.com.br/api/v6/uol/messages");
     promise.then(tratarMensagens);
-    promise.catch(tratarErroMsg);
-}
-
-function tratarErroMsg(){
-    alert("Mensagem não enviada, por favor entre novamente.")
-    window.location.reload();
 }
 
 function tratarMensagens(mensagens){
@@ -230,4 +224,12 @@ function enviarMensagem (){
         type: tipoChat
     }
     const promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages", mensagem);
+    promise.catch(tratarErroMsg);
+}
+
+function tratarErroMsg(error){
+    if(error.status != 200){
+        alert("Mensagem não enviada, por favor entre novamente.")
+        window.location.reload();
+    }
 }
