@@ -226,6 +226,7 @@ function enviarMensagem (){
         type: tipoChat
     }
     const promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages", mensagem);
+    promise.then(buscarMensagens);
     promise.catch(tratarErroMsg);
 }
 
